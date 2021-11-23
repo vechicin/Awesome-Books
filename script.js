@@ -25,23 +25,12 @@ function removeBook(title) {
 
 function displayBooks(bookList) {
   for (let i = 0; i <= bookList.length; i++) {
-    return bookList[i];
+      let book = bookList[i];
+      book.innerHTML = `<div class='book'><p>${book.title}</p><br><p>${book.author}</p><br><button class='btn'>Remove</button>`;
+      return book;
   }
 };
 
-const createElementWithClass = (type, className) => {
-  const element = document.createElement(type);
-  element.classList.add(className);
-  return element;
-};
-
 let listOfBooks = function() {
-  let book = createElementWithClass('div', 'book');
-  let bookTitle = createElementWithClass('p', 'book-author');
-  let bookAuthor = createElementWithClass('p', 'book-author');
-  bookTitle.innerHTML = book.title;
-  bookAuthor.innerHTML = book.author;
-  book.appendChild(bookTitle);
-  book.appendChild(bookAuthor);
-  booksSection.appendChild(book);
+  booksSection.appendChild(displayBooks);
 };
