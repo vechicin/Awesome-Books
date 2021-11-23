@@ -2,22 +2,23 @@
 let bookList = [];
 let booksSection = document.querySelector('.books');
 let addButton = document.querySelector('.add-book');
-let removeButton = document.querySelectorAll('.btn-remove');
+let removeButton = document.querySelectorAll('.remove-button');
 
 // FUNCTIONS
 function addBook(title, author) {
   let book = {
+    id : 0,
     title: '',
     author: ''
   };
-
+  book.id = new Date().getTime();
   book.title = title;
   book.author = author;
   bookList.push(book);
 };
 
-function removeBook(title) {
-  let index = bookList.findIndex(book => book.title === title);
+function removeBook(id) {
+  let index = bookList.findIndex(book => book.id === id);
   bookList.splice(index, 1);
 };
 
@@ -29,17 +30,13 @@ const createElementWithClass = (type, className) => {
 
 let listOfBooks = function () {
   let bookDiv = createElementWithClass('div', 'book');
-  let bookTitle = createElementWithClass('p', 'book-info');
-  let bookAuthor = createElementWithClass('p', 'book-info');
+  let bookTitleAndAuthor = createElementWithClass('p', 'book-info');
   for (let i = 0; i <= bookList.length; i++) {
-    return bookList[i]; 
+    bookList[i];
+    bookTitleAndAuthor.innerHTML = `${bookList[i].title} by ${bookList[i].author} <button id="${bookList[i].id}" class="remove-button">Remove</button>`;
+    bookDiv.appendChild(bookTitleAndAuthor);
+    booksSection.appendChild(bookDiv);
   }
-  bookTitle.innerHTML = book.title;
-  bookAuthor.innerHTML = book.author;
-  bookDiv.appendChild(bookTitle);
-  bookDiv.appendChild(bookAuthor);
-  booksSection.appendChild(bookDiv);
-  return booksSection;
 };
 
 // EVENT LISTENERS
@@ -47,10 +44,11 @@ addButton.addEventListener('click', () => {
   let bookTitle = document.getElementById('title').value;
   let bookAuthor = document.getElementById('author').value;
   addBook(bookTitle, bookAuthor);
-  listOfBooks;
+  listOfBooks();
 });
 
-addBook('The Bible', 'Moses');
-addBook('Lord of the Rings', 'J.R.R Tolkien');
-console.log(listOfBooks);
+removeButton.addEventListener('click', () => {
+  console.log(this.id);
+});
+
 console.log(bookList);
