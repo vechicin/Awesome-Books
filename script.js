@@ -1,36 +1,56 @@
 // ELEMENTS
 let bookList = [];
-
-let book = {
-  title : '',
-  author : ''
-};
-
 let booksSection = document.querySelector('.books');
 let addButton = document.querySelector('.add-book');
-let removeButton = document.querySelectorAll('.remove');
+let removeButton = document.querySelectorAll('.btn-remove');
+
 // FUNCTIONS
 function addBook(title, author) {
+  let book = {
+    title: '',
+    author: ''
+  };
+
   book.title = title;
   book.author = author;
   bookList.push(book);
-  return bookList;
 };
 
 function removeBook(title) {
   let index = bookList.findIndex(book => book.title === title);
   bookList.splice(index, 1);
-  return bookList;
 };
 
-function displayBooks(bookList) {
+const createElementWithClass = (type, className) => {
+  const element = document.createElement(type);
+  element.classList.add(className);
+  return element;
+};
+
+let listOfBooks = function () {
+  let bookDiv = createElementWithClass('div', 'book');
+  let bookTitle = createElementWithClass('p', 'book-info');
+  let bookAuthor = createElementWithClass('p', 'book-info');
   for (let i = 0; i <= bookList.length; i++) {
-      let book = bookList[i];
-      book.innerHTML = `<div class='book'><p>${book.title}</p><br><p>${book.author}</p><br><button class='btn'>Remove</button>`;
-      return book;
+    return bookList[i]; 
   }
+  bookTitle.innerHTML = book.title;
+  bookAuthor.innerHTML = book.author;
+  bookDiv.appendChild(bookTitle);
+  bookDiv.appendChild(bookAuthor);
+  booksSection.appendChild(bookDiv);
+  return booksSection;
 };
 
-let listOfBooks = function() {
-  booksSection.appendChild(displayBooks);
-};
+// EVENT LISTENERS
+addButton.addEventListener('click', () => {
+  let bookTitle = document.getElementById('title').value;
+  let bookAuthor = document.getElementById('author').value;
+  addBook(bookTitle, bookAuthor);
+  listOfBooks;
+});
+
+addBook('The Bible', 'Moses');
+addBook('Lord of the Rings', 'J.R.R Tolkien');
+console.log(listOfBooks);
+console.log(bookList);
