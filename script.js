@@ -29,9 +29,7 @@ function addBook(title, author) {
 }
 
 function removeBook(id) {
-  const index = bookList.findIndex((book) => book.id === id);
-  console.log(id)
-  console.log(index)
+  const index = bookList.findIndex((book) => book.id == id);
   bookList.splice(index, 1);
   localStorage.setItem('BookList', JSON.stringify(bookList));
 }
