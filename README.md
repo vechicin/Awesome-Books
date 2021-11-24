@@ -17,6 +17,12 @@
 - Twitter: [@vechicin](https://twitter.com/vechicin)
 - LinkedIn: [Santiago Velosa Arias](https://www.linkedin.com/in/santiago-velosa-arias-5b7543112/)
 
+👤 **Juan Paulo Pérez-Tejada**
+
+- GitHub: [@Maclenn77](https://github.com/Maclenn77)
+- Twitter: [@SrJuanPapas](https://twitter.com/srjuanpapas)
+- LinkedIn: [Juan Paulo Pérez-Tejada](https://www.linkedin.com/in/juanpaulopereztejada/)
+
 ## 🤝 Contributing
 
 Contributions, issues, and feature requests are welcome!
