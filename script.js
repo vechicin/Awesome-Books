@@ -1,3 +1,4 @@
+/* eslint-disable max-classes-per-file */
 // ELEMENTS
 const booksSection = document.querySelector('.books');
 const addButton = document.querySelector('.add-book');
@@ -23,13 +24,13 @@ class Shelf {
   }
 
   removeBook(id) {
-    const index = this.bookList.findIndex((book) => book.id == id);
+    const index = this.bookList.findIndex((book) => book.id.toString() === id);
     this.bookList.splice(index, 1);
     localStorage.setItem('BookList', JSON.stringify(this.bookList));
   }
 
   checkLs() {
-    if(!localStorage.getItem('BookList')) {
+    if (!localStorage.getItem('BookList')) {
       this.bookList = [];
       localStorage.setItem('BookList', JSON.stringify(this.bookList));
     } else {
@@ -41,8 +42,8 @@ class Shelf {
     this.checkLs();
     this.bookList.forEach((element) => {
       listedBook.insertAdjacentHTML('beforeend', `<li>${element.title} by ${element.author} <button id="${element.id}">Remove</button></li>`);
-  });
- }
+    });
+  }
 }
 
 // EVENT LISTENERS
@@ -64,5 +65,3 @@ booksSection.addEventListener('click', (e) => {
 });
 
 shelf.loadPage();
-
-
