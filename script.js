@@ -36,6 +36,13 @@ class Shelf {
       this.bookList = JSON.parse(localStorage.getItem('BookList'));
     }
   }
+
+  loadPage() {
+    this.checkLs();
+    this.bookList.forEach((element) => {
+      listedBook.insertAdjacentHTML('beforeend', `<li>${element.title} by ${element.author} <button id="${element.id}">Remove</button></li>`);
+  });
+ }
 }
 
 // EVENT LISTENERS
@@ -50,8 +57,10 @@ addButton.addEventListener('click', () => {
   listedBook.insertAdjacentHTML('beforeend', `<li>${book.title} by ${book.author} <button class="remove-button">Remove</button></li>`);
 });
 
-booksSection.addEventListener('click', (e) => {
-  Book.removeBook(e.target.id);
-  const element = document.getElementById(e.target.id);
+booksSection.addEventListener('click', () => {
+  shelf.removeBook(shelf.bookList.id);
+  const element = document.getElementsByClassName('remove-button');
   element.parentElement.remove();
 });
+
+
