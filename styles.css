@@ -2,3 +2,25 @@ body {
   display: flex;
   flex-direction: column;
 }
+
+li {
+  display: flex;
+  flex-direction: column;
+  border-bottom: 1px solid #d3d3d3;
+}
+
+button {
+  width: 10%;
+  margin-top: 1%;
+  margin-bottom: 1%;
+}
+
+.book-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.book-input {
+  width: 10%;
+  margin-bottom: 2%;
+}
