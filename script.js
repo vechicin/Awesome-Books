@@ -7,7 +7,7 @@ const listedBook = document.querySelector('.book-list');
 // FUNCTIONS
 const listOfBooks = function (title, author, id) {
   const li = document.createElement('li');
-  li.innerHTML = `${title} by ${author} <button id="${id}">remove</button>`;
+  li.innerHTML = `${title} by ${author} <button id="${id}">Remove</button>`;
   listedBook.appendChild(li);
 };
 
