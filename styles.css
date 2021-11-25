@@ -1,26 +1,105 @@
 body {
   display: flex;
   flex-direction: column;
+  align-items: center;
+  background: rgb(69, 66, 66);
+  background: radial-gradient(circle, rgba(69, 66, 66, 1) 28%, rgba(120, 122, 125, 1) 97%);
+  margin: 0;
+  padding: 0;
+}
+
+h1 {
+  text-align: center;
+  font-family: 'Merriweather', serif;
+  color: rgb(221, 212, 212);
+}
+
+h2 {
+  text-align: center;
 }
 
 li {
   display: flex;
   flex-direction: column;
-  border-bottom: 1px solid #d3d3d3;
 }
 
 button {
-  width: 10%;
+  width: 15%;
   margin-top: 1%;
   margin-bottom: 1%;
+  background-color: #4041ff;
+  border-radius: 5px;
+  border: none;
+  color: rgb(221, 212, 212);
+  font-family: 'Goudy Bookletter 1911', serif;
 }
 
+button:hover {
+  cursor: pointer;
+}
+
+/* CSS OF LIST OF BOOKS */
+
+.books {
+  align-items: center;
+  width: 80%;
+  justify-content: center;
+  list-style: none;
+}
+
+hr {
+  width: 15%;
+  margin-top: 4%;
+  margin-bottom: 5%;
+}
+
+.book-list {
+  border: 3px solid #d3d3d3;
+  font-family: 'Goudy Bookletter 1911', serif;
+  color: rgb(221, 212, 212);
+  padding: 0;
+  list-style-type: none;
+}
+
+.odd-book {
+  flex-direction: row;
+  background-color: #d91f16;
+  justify-content: space-between;
+  padding: 2%;
+}
+
+.even-book {
+  flex-direction: row;
+  background-color: #009e3b;
+  justify-content: space-between;
+  padding: 2%;
+}
+
+.new-book {
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 2%;
+  background-color: #ffdd40;
+  color: #000;
+  border-top: 2px solid #fff;
+}
+
+/* CSS OF FORM */
+
 .book-form {
+  background-color: #ffd726;
+  opacity: 0.9;
+  width: 90%;
+  max-width: 650px;
   display: flex;
   flex-direction: column;
+  align-items: center;
+  font-family: 'Goudy Bookletter 1911', serif;
 }
 
 .book-input {
-  width: 10%;
+  text-align: center;
+  width: 35%;
   margin-bottom: 2%;
+  font-family: 'Goudy Bookletter 1911', serif;
 }

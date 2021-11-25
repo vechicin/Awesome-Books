@@ -3,7 +3,7 @@
 
 > This is a project created during my Microverse career where I needed to build a website that stores information about books starting the design with low wire-frame and building the project up from there.
 
-![screenshot](./assets/images/screenshot.png)
+![screenshot](./assets/images/screenshot_2.png)
 
 ## Built With
 

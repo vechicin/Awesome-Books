@@ -7,15 +7,20 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Awesome Books</title>
   <script src="script.js" defer></script>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Goudy+Bookletter+1911&family=Merriweather&display=swap');
+  </style>
   <link rel="stylesheet" href="styles.css">
 </head>
 
 <body>
-  <h1 class="title">Awesome books</h1>
+  <h1 class="title">All Awesome Books</h1>
   <section class="books">
     <ul class="book-list"></ul>
   </section>
+  <hr>
   <form class="book-form" action="#">
+    <h2>Add a new book</h2>
     <input type="text" class="book-input" id="title" placeholder="Title">
     <input type="text" class="book-input" id="author" placeholder="Author">
     <button type="button" class="add-book">Add</button>

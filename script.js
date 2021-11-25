@@ -40,9 +40,13 @@ class Shelf {
 
   loadPage() {
     this.checkLs();
-    this.bookList.forEach((element) => {
-      listedBook.insertAdjacentHTML('beforeend', `<li>${element.title} by ${element.author} <button id="${element.id}">Remove</button></li>`);
-    });
+    for (let i = 0; i < this.bookList.length; i += 1) {
+      if (this.bookList.indexOf(this.bookList[i]) % 2 !== 0) {
+        listedBook.insertAdjacentHTML('beforeend', `<li class="odd-book">${this.bookList[i].title} by ${this.bookList[i].author} <button id="${this.bookList[i].id}" class="remove-button">Remove</button></li>`);
+      } else {
+        listedBook.insertAdjacentHTML('beforeend', `<li class="even-book">${this.bookList[i].title} by ${this.bookList[i].author} <button id="${this.bookList[i].id}" class="remove-button">Remove</button></li>`);
+      }
+    }
   }
 }
 
@@ -55,7 +59,7 @@ addButton.addEventListener('click', () => {
   const bookAuthor = document.getElementById('author').value;
   const book = new Book(bookTitle, bookAuthor);
   shelf.addBook(book);
-  listedBook.insertAdjacentHTML('beforeend', `<li>${book.title} by ${book.author} <button class="remove-button">Remove</button></li>`);
+  listedBook.insertAdjacentHTML('beforeend', `<li class=new-book>${book.title} by ${book.author} <button id="${book.id}"class="remove-button">Remove</button></li>`);
 });
 
 booksSection.addEventListener('click', (e) => {

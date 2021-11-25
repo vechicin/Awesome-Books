@@ -1,7 +1,7 @@
 {
   "name": "awesome-books",
   "version": "1.0.0",
-  "description": "",
+  "description": "![](https://img.shields.io/badge/Microverse-blueviolet)",
   "main": "script.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -11,7 +11,7 @@
     "url": "git+https://github.com/vechicin/Awesome-Books.git"
   },
   "keywords": [],
-  "author": "Santiago Velosa, Juan Paulo Perez-Tejada",
+  "author": "Santiago Velosa, Juan Paulo Pérez-Tejada",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/vechicin/Awesome-Books/issues"
