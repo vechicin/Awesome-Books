@@ -6,6 +6,7 @@ body {
   background: radial-gradient(circle, rgba(69, 66, 66, 1) 28%, rgba(120, 122, 125, 1) 97%);
   margin: 0;
   padding: 0;
+  font-family: 'Merrieweather', serif;
 }
 
 .navbar {
@@ -43,6 +44,7 @@ h1 {
 
 h2 {
   text-align: center;
+  font-family: 'Merriweather', serif;
 }
 
 li {
@@ -129,4 +131,39 @@ hr {
   width: 35%;
   margin-bottom: 2%;
   font-family: 'Goudy Bookletter 1911', serif;
+}
+
+/* Contact Info */
+.contact-info {
+  background-color: #4041ff;
+  color: #fff;
+  width: 90%;
+  max-width: 650px;
+}
+
+p {
+  text-align: center;
+  margin: 2%;
+}
+
+.contact-info ul {
+  text-align: center;
+  list-style-type: disc;
+  list-style: outside;
+}
+
+/* Footer */
+
+footer {
+  font-size: 0.8rem;
+  padding: 1%;
+  width: 100%;
+  max-height: min-content;
+  background-color: #ec5242;
+  margin-top: 7%;
+}
+
+span {
+  padding-left: 15px;
+  color: #fff;
 }
