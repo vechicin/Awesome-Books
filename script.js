@@ -42,7 +42,6 @@ class Shelf {
     this.checkLs();
     for (let i = 0; i < this.bookList.length; i += 1) {
       if (this.bookList.indexOf(this.bookList[i]) % 2 !== 0) {
-        console.log(this.bookList.indexOf(this.bookList[i]));
         listedBook.insertAdjacentHTML('beforeend', `<li class="odd-book">${this.bookList[i].title} by ${this.bookList[i].author} <button id="${this.bookList[i].id}" class="remove-button">Remove</button></li>`);
       } else {
         listedBook.insertAdjacentHTML('beforeend', `<li class="even-book">${this.bookList[i].title} by ${this.bookList[i].author} <button id="${this.bookList[i].id}" class="remove-button">Remove</button></li>`);
