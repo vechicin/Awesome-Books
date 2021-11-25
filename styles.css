@@ -16,6 +16,7 @@ body {
   width: 80%;
   padding: 2%;
   font-family: 'Merriweather', serif;
+  border: 2px solid #ffd726;
 }
 
 .navbar-title {
@@ -26,14 +27,21 @@ body {
 .links {
   display: flex;
   flex-direction: row;
-  color: #00cc4b;
   gap: 30%;
+  margin-right: 10%;
 }
 
 a {
   display: flex;
   flex-direction: row;
   justify-content: center;
+  text-decoration: none;
+  color: #00cc4b;
+  font-size: 24px;
+}
+
+.link:hover {
+  cursor: pointer;
 }
 
 h1 {

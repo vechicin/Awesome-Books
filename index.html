@@ -17,21 +17,21 @@
   <nav class="navbar">
     <h2 class="navbar-title">Awesome Books</h2>
     <ul class="links">
-      <li class="link"><a>List</a></li>
-      <li class="link"><a>Add</a></li>
-      <li class="link"><a>Contact</a></li>
+      <li class="link"><a class="navbar-links" href="#list">List</a></li>
+      <li class="link"><a class="navbar-links" href="#add">Add</a></li>
+      <li class="link"><a class="navbar-links" href="#contact">Contact</a></li>
     </ul>
   </nav>
 
   <h1 class="title">All Awesome Books</h1>
 
-  <section class="books">
+  <section id="list" class="books">
     <ul class="book-list"></ul>
   </section>
 
   <hr>
 
-  <form class="book-form" action="#">
+  <form id="add" class="book-form" action="#">
     <h2>Add a new book</h2>
     <input type="text" class="book-input" id="title" placeholder="Title">
     <input type="text" class="book-input" id="author" placeholder="Author">
@@ -40,7 +40,7 @@
 
   <hr>
 
-  <section class="contact-info">
+  <section id="contact" class="contact-info">
     <h2>Contact Information</h2>
     <p>Do have any questions or you just want to say "Hello"?</p>
     <p>You can reach out to us!</p>
