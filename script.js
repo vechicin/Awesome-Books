@@ -4,6 +4,18 @@ const booksSection = document.querySelector('.books');
 const addButton = document.querySelector('.add-book');
 const listedBook = document.querySelector('.book-list');
 
+// ELEMENTS FOR HIDING NAVBAR
+
+const navList = document.getElementById('nav-bar');
+const navAdd = document.getElementById('nav-add');
+const navContact = document.getElementById('nav-contact');
+
+// ELEMENTS TO SHOW
+
+const list = document.getElementById('list');
+const add = document.getElementById('add');
+const contact = document.getElementById('contact');
+
 // CLASSES
 class Book {
   constructor(title, author) {
@@ -67,5 +79,24 @@ booksSection.addEventListener('click', (e) => {
   const element = document.getElementById(e.target.id);
   element.parentElement.remove();
 });
+
+// DISPLAY AND HIDE
+
+// function displayElement() {
+//   let displayList = list.style.display; //Getting display of list
+//   if (displayList === 'flex') { // Comparing display
+//     list.style.display = 'none' // Hiding element if display
+//     navList.style.color = 'red'
+//   }
+//   else {
+//     list.style.display = 'flex';
+//     navList.style.color = '#00cc4b';
+//   }
+// }
+
+// navList.addEventListener('click', () => {
+//   displayElement();
+// })
+
 
 shelf.loadPage();
