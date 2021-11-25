@@ -59,7 +59,7 @@ addButton.addEventListener('click', () => {
   const bookAuthor = document.getElementById('author').value;
   const book = new Book(bookTitle, bookAuthor);
   shelf.addBook(book);
-  listedBook.insertAdjacentHTML('beforeend', `<li class=new-book>${book.title} by ${book.author} <button class="remove-button">Remove</button></li>`);
+  listedBook.insertAdjacentHTML('beforeend', `<li class=new-book>${book.title} by ${book.author} <button id="${book.id}"class="remove-button">Remove</button></li>`);
 });
 
 booksSection.addEventListener('click', (e) => {
