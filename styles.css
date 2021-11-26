@@ -19,6 +19,17 @@ body {
   border: 2px solid #ffd726;
 }
 
+.time {
+  width: 80%;
+  display: flex;
+  justify-content: flex-end;
+}
+
+#clock {
+  color: #fff;
+  font-size: 20px;
+}
+
 .navbar-title {
   margin-left: 2%;
   color: #f99590;
@@ -96,7 +107,7 @@ button:hover {
   align-items: center;
   font-family: 'Goudy Bookletter 1911', serif;
   margin-bottom: 10%;
-} 
+}
 
 #contact {
   display: flex;
@@ -110,7 +121,6 @@ button:hover {
 #contact ul {
   text-align: center;
   list-style-type: disc;
-  list-style: outside;
 }
 
 hr {

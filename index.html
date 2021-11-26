@@ -6,6 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Awesome Books</title>
+  <script src="https://moment.github.io/luxon/global/luxon.js"></script>
   <script src="script.js" defer></script>
   <style>
     @import url('https://fonts.googleapis.com/css2?family=Goudy+Bookletter+1911&family=Merriweather&display=swap');
@@ -18,10 +19,14 @@
     <h2 class="navbar-title">Awesome Books</h2>
     <ul class="links">
       <li class="link" id="nav-list">List</li>
-      <li class="link"id="nav-add">Add</li>
+      <li class="link" id="nav-add">Add</li>
       <li class="link" id="nav-contact">Contact</li>
     </ul>
   </nav>
+
+  <div class="time">
+    <p id="clock"></p>
+  </div>
 
   <h1 class="title">All Awesome Books</h1>
 
@@ -46,8 +51,9 @@
       <li>Our address: Streetname 22, 84503 City, County</li>
     </ul>
   </section>
+  
+  <footer>
+    <span>Copyright 2021</span>
+  </footer>
 </body>
-<footer>
-  <span>Copyright 2021</span>
-</footer>
 </html>

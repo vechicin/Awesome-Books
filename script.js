@@ -1,8 +1,11 @@
 /* eslint-disable max-classes-per-file */
+/* eslint-disable no-undef */
 // ELEMENTS
+const { DateTime } = luxon;
 const booksSection = document.getElementById('list');
 const addButton = document.querySelector('.add-book');
 const listedBook = document.querySelector('.book-list');
+const clock = document.getElementById('clock');
 
 // ELEMENTS FOR HIDING NAVBAR
 
@@ -59,20 +62,23 @@ class Shelf {
 }
 
 // FUNCTIONS FOR DISPLAYING AND HIDING
-
 function show(section) {
-  section.style.display = "flex";
-  section.style.flexDirection = "column";
+  section.style.display = 'flex';
+  section.style.flexDirection = 'column';
 }
 
 function hide(section) {
-  section.style.display = "none";
+  section.style.display = 'none';
 }
 
 function initialPage() {
   hide(list);
   show(add);
   hide(contact);
+}
+
+function setTime() {
+  clock.innerHTML = DateTime.now().toLocaleString(DateTime.DATETIME_MED);
 }
 
 // EVENT LISTENERS
@@ -87,8 +93,7 @@ addButton.addEventListener('click', () => {
   const book = new Book(bookTitle, bookAuthor);
   const errorMessage = document.querySelector('.warning');
   if (bookTitle === '' || bookAuthor === '') {
-    add.insertAdjacentHTML('beforeend', `<p class="warning">Please fill out all the fields!</p>`);
-    return
+    add.insertAdjacentHTML('beforeend', '<p class="warning">Please fill out all the fields!</p>');
   } else if (errorMessage) {
     errorMessage.remove();
     shelf.addBook(book);
@@ -109,7 +114,6 @@ booksSection.addEventListener('click', (e) => {
   element.parentElement.remove();
 });
 
-
 // SHOW AND HIDE SECTIONS IN THE PAGE
 navMenu.addEventListener('click', (e) => {
   if (e.target.id === 'nav-list') {
@@ -126,3 +130,5 @@ navMenu.addEventListener('click', (e) => {
     show(contact);
   }
 });
+
+setTime();
