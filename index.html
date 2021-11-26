@@ -6,6 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Awesome Books</title>
+  <script src="https://moment.github.io/luxon/global/luxon.js"></script>
   <script src="script.js" defer></script>
   <style>
     @import url('https://fonts.googleapis.com/css2?family=Goudy+Bookletter+1911&family=Merriweather&display=swap');
@@ -14,17 +15,45 @@
 </head>
 
 <body>
+  <nav class="navbar">
+    <h2 class="navbar-title">Awesome Books</h2>
+    <ul class="links">
+      <li class="link" id="nav-list">List</li>
+      <li class="link" id="nav-add">Add</li>
+      <li class="link" id="nav-contact">Contact</li>
+    </ul>
+  </nav>
+
+  <div class="time">
+    <p id="clock"></p>
+  </div>
+
   <h1 class="title">All Awesome Books</h1>
-  <section class="books">
+
+  <section id="list">
     <ul class="book-list"></ul>
   </section>
-  <hr>
-  <form class="book-form" action="#">
+
+  <form id="add" action="#">
     <h2>Add a new book</h2>
     <input type="text" class="book-input" id="title" placeholder="Title">
     <input type="text" class="book-input" id="author" placeholder="Author">
     <button type="button" class="add-book">Add</button>
   </form>
-</body>
 
+  <section id="contact">
+    <h2>Contact Information</h2>
+    <p>Do have any questions or you just want to say "Hello"?</p>
+    <p>You can reach out to us!</p>
+    <ul>
+      <li>Our e-mail: mail@mail.com</li>
+      <li>Our phone number: 555-555-55</li>
+      <li>Our address: Streetname 22, 84503 City, County</li>
+    </ul>
+  </section>
+  
+  <footer>
+    <span>Copyright 2021</span>
+  </footer>
+</body>
 </html>

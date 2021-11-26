@@ -6,6 +6,53 @@ body {
   background: radial-gradient(circle, rgba(69, 66, 66, 1) 28%, rgba(120, 122, 125, 1) 97%);
   margin: 0;
   padding: 0;
+  font-family: 'Merrieweather', serif;
+}
+
+.navbar {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 80%;
+  padding: 2%;
+  font-family: 'Merriweather', serif;
+  border: 2px solid #ffd726;
+}
+
+.time {
+  width: 80%;
+  display: flex;
+  justify-content: flex-end;
+}
+
+#clock {
+  color: #fff;
+  font-size: 20px;
+}
+
+.navbar-title {
+  margin-left: 2%;
+  color: #f99590;
+}
+
+.links {
+  display: flex;
+  flex-direction: row;
+  gap: 30%;
+  margin-right: 10%;
+}
+
+.link {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  text-decoration: none;
+  color: #00cc4b;
+  font-size: 24px;
+}
+
+.link:hover {
+  cursor: pointer;
 }
 
 h1 {
@@ -16,6 +63,7 @@ h1 {
 
 h2 {
   text-align: center;
+  font-family: 'Merriweather', serif;
 }
 
 li {
@@ -40,11 +88,39 @@ button:hover {
 
 /* CSS OF LIST OF BOOKS */
 
-.books {
+#list {
+  display: flex;
   align-items: center;
-  width: 80%;
   justify-content: center;
   list-style: none;
+  margin-bottom: 10%;
+  width: 80%;
+}
+
+#add {
+  background-color: #ffd726;
+  opacity: 0.9;
+  width: 90%;
+  max-width: 650px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: 'Goudy Bookletter 1911', serif;
+  margin-bottom: 10%;
+}
+
+#contact {
+  display: flex;
+  flex-direction: column;
+  background-color: #4041ff;
+  color: #fff;
+  width: 90%;
+  max-width: 650px;
+}
+
+#contact ul {
+  text-align: center;
+  list-style-type: disc;
 }
 
 hr {
@@ -59,6 +135,7 @@ hr {
   color: rgb(221, 212, 212);
   padding: 0;
   list-style-type: none;
+  width: 100%;
 }
 
 .odd-book {
@@ -66,6 +143,7 @@ hr {
   background-color: #d91f16;
   justify-content: space-between;
   padding: 2%;
+  font-size: 20px;
 }
 
 .even-book {
@@ -73,6 +151,7 @@ hr {
   background-color: #009e3b;
   justify-content: space-between;
   padding: 2%;
+  font-size: 20px;
 }
 
 .new-book {
@@ -82,24 +161,46 @@ hr {
   background-color: #ffdd40;
   color: #000;
   border-top: 2px solid #fff;
+  font-size: 20px;
 }
 
 /* CSS OF FORM */
-
-.book-form {
-  background-color: #ffd726;
-  opacity: 0.9;
-  width: 90%;
-  max-width: 650px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  font-family: 'Goudy Bookletter 1911', serif;
-}
 
 .book-input {
   text-align: center;
   width: 35%;
   margin-bottom: 2%;
   font-family: 'Goudy Bookletter 1911', serif;
+}
+
+.warning {
+  background-color: #d91f16;
+  color: #fff;
+  width: 50%;
+}
+
+/* Contact Info */
+
+p {
+  text-align: center;
+  margin: 2%;
+}
+
+/* Footer */
+
+footer {
+  font-size: 0.8rem;
+  padding: 1%;
+  width: 100%;
+  max-height: min-content;
+  background-color: #ec5242;
+  margin-top: 7%;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+}
+
+span {
+  padding-left: 15px;
+  color: #fff;
 }
