@@ -31,7 +31,7 @@ body {
   margin-right: 10%;
 }
 
-a {
+.link {
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -77,11 +77,38 @@ button:hover {
 
 /* CSS OF LIST OF BOOKS */
 
-.books {
+#list {
+  display: flex;
   align-items: center;
   width: 80%;
   justify-content: center;
   list-style: none;
+}
+
+#add {
+  background-color: #ffd726;
+  opacity: 0.9;
+  width: 90%;
+  max-width: 650px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: 'Goudy Bookletter 1911', serif;
+} 
+
+#contact {
+  display: flex;
+  flex-direction: column;
+  background-color: #4041ff;
+  color: #fff;
+  width: 90%;
+  max-width: 650px;
+}
+
+#contact ul {
+  text-align: center;
+  list-style-type: disc;
+  list-style: outside;
 }
 
 hr {
@@ -123,17 +150,6 @@ hr {
 
 /* CSS OF FORM */
 
-.book-form {
-  background-color: #ffd726;
-  opacity: 0.9;
-  width: 90%;
-  max-width: 650px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  font-family: 'Goudy Bookletter 1911', serif;
-}
-
 .book-input {
   text-align: center;
   width: 35%;
@@ -142,22 +158,10 @@ hr {
 }
 
 /* Contact Info */
-.contact-info {
-  background-color: #4041ff;
-  color: #fff;
-  width: 90%;
-  max-width: 650px;
-}
 
 p {
   text-align: center;
   margin: 2%;
-}
-
-.contact-info ul {
-  text-align: center;
-  list-style-type: disc;
-  list-style: outside;
 }
 
 /* Footer */
