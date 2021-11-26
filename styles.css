@@ -80,9 +80,10 @@ button:hover {
 #list {
   display: flex;
   align-items: center;
-  width: 80%;
   justify-content: center;
   list-style: none;
+  margin-bottom: 10%;
+  width: 80%;
 }
 
 #add {
@@ -94,6 +95,7 @@ button:hover {
   flex-direction: column;
   align-items: center;
   font-family: 'Goudy Bookletter 1911', serif;
+  margin-bottom: 10%;
 } 
 
 #contact {
@@ -123,6 +125,7 @@ hr {
   color: rgb(221, 212, 212);
   padding: 0;
   list-style-type: none;
+  width: 100%;
 }
 
 .odd-book {
@@ -130,6 +133,7 @@ hr {
   background-color: #d91f16;
   justify-content: space-between;
   padding: 2%;
+  font-size: 20px;
 }
 
 .even-book {
@@ -137,6 +141,7 @@ hr {
   background-color: #009e3b;
   justify-content: space-between;
   padding: 2%;
+  font-size: 20px;
 }
 
 .new-book {
@@ -146,6 +151,7 @@ hr {
   background-color: #ffdd40;
   color: #000;
   border-top: 2px solid #fff;
+  font-size: 20px;
 }
 
 /* CSS OF FORM */
@@ -155,6 +161,12 @@ hr {
   width: 35%;
   margin-bottom: 2%;
   font-family: 'Goudy Bookletter 1911', serif;
+}
+
+.warning {
+  background-color: #d91f16;
+  color: #fff;
+  width: 50%;
 }
 
 /* Contact Info */
@@ -173,6 +185,9 @@ footer {
   max-height: min-content;
   background-color: #ec5242;
   margin-top: 7%;
+  position: fixed;
+  left: 0;
+  bottom: 0;
 }
 
 span {
